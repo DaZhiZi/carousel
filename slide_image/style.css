@@ -1,0 +1,209 @@
+.gua-hide {
+    display: none;
+}
+ 
+.gua-item {
+    /*display: inline-block;*/
+    /*opacity: 0.6;*/
+    filter: grayscale(100%)
+}
+.gua-item.gua-highlight {
+    filter: initial;
+    /*opacity: 1;*/
+}
+.gua-item.gua-highlight img {
+    width: 500px;
+    height: 400px;
+}
+ /* transition 这个 css 指定了某个属性发生变化的时候自动使用动画效果和动画时间 */
+img {
+    transition: width 1s, height 1s;
+}
+.gua-item img {
+    width: 500px;
+    height: 400px
+}
+/* 3， 轮播图*/
+.gua-slide {
+    position: relative;
+    width: 590px;
+}
+.gua-slide-image {
+    display: none;
+}
+/*.gua-slide-image*/
+.gua-active {
+    display: inline-block;
+}
+.gua-slide-button {
+    position: absolute;
+    height: 50px;
+    width: 30px;
+    /**/
+    background: black;
+    color: white;
+    opacity: 0.3;
+    /**/
+    border: none;
+    /**/
+    cursor: pointer;
+}
+
+ 
+.gua-slide-button:focus {
+    outline: none;
+}
+.gua-slide-button.gua-left {
+    left: 0;
+}
+.gua-slide-button.gua-right {
+    right: 0;
+}
+/* 用来垂直居中一个元素的套路 css */
+.gua-vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.gua-slide-indicators {
+    /*position: absolute;
+    bottom: 10px;*/
+    /*position: relative;
+    bottom: 25px;
+    text-align: center;*/
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gua-slide-indi {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+}
+.gua-white {
+    background: white;
+}
+
+/* carousel */
+.gua-carousel {
+    height: 440px;
+    width: 1100px;
+    overflow: hidden;   
+    margin: 0 auto;    /* display: block   居中 */
+}
+.gua-carousel-images {
+    position: relative;
+    width: 1100px;
+    height: 440px;
+}
+.gua-carousel-image {
+    position: absolute;
+    left: 0;
+    transition:all .8s;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    transform-origin: left;
+    transform: perspective(200px) rotateY(10deg) translateZ(-70px);
+    -webkit-box-reflect:below 0px -webkit-linear-gradient(top, transparent, transparent 90%, rgba(255,255,255,0.3)); 
+
+}
+.gua-image-left {
+    left: 0;
+    transform-origin: left;
+    transform: perspective(200px) rotateY(10deg) translateZ(-70px);
+}
+.gua-image-right {
+    left: 450px;
+    transform-origin: right;
+    transform: perspective(200px) rotateY(-10deg) translateZ(-70px);
+}
+.gua-carousel img {
+    width: 660px;
+    height: 450px;
+    vertical-align: bottom;
+}
+.gua-image-prev {
+    left: 50px;
+    transform-origin: left;
+    transform: perspective(200px) rotateY(8deg) translateZ(-35px);
+    z-index: 1;
+    opacity: 1;
+}
+.gua-image-next {
+    left: 350px;
+    transform-origin: right;
+    transform: perspective(200px) rotateY(-8deg) translateZ(-35px);
+    z-index: 1;
+    opacity: 1;
+}
+.gua-image-center {
+    z-index: 2;
+    left: 200px;
+    opacity: 1;
+    transform: perspective(0px) rotateY(0deg) translateZ(0px);
+}
+.gua-image-shadow {
+    position: absolute;
+    top: 0;
+    left: 1;
+    right: 0;
+    bottom: 0;
+    background: rgba(217, 240, 243, 0.18);
+}
+
+
+.tiao {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+}
+.dian {
+    background: black;
+    display: inline-block;
+    width: 2rem;
+    height: 0.3rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.dian:hover {
+    cursor: pointer;
+}
+
+.active {
+    background: #5875F5;
+}
+body {
+    background: rgba(197, 231, 226, 0.51);
+}
+.gua-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+}
+text {
+    line-height: 3rem;
+    color: rgba(83, 203, 113, 0.78);
+    font-family: 'Times New Roman';
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.aurthor {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 4%;
+    line-height: 1rem;
+    color: rgba(32, 43, 35, 0.92);
+    font-family: 'Times New Roman';
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
+}
