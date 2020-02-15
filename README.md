@@ -3,7 +3,7 @@
 
 ### 项目截图：
 
-![carousel](../screenphoto/carousel.png)
+![carousel](./screenphoto/carousel.png)
 
 ### 思路：
 - 旋转木马的思路：
@@ -28,15 +28,18 @@
                             - gua-image-center
                             - gua-image-left
                             - gua-image-right
-                            - data-active 改变 +1 -1
+                            - data-active 改变 
+
             - images
                 - data-index
                    - slide image
                             - gua-image-center
                             - gua-image-left
                             - gua-image-right
+
                     - slide indicator
                          - 删除所有 active  添加 active
+
         - auto slide image
             - images
             - indicators
